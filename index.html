@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes Premium - Entretenimiento</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%); 
+        padding: 20px; 
+        line-height: 1.5; 
+        min-height: 100vh;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { text-align: center; color: #1a1a1a; margin-bottom: 10px; font-size: 28px; font-weight: 700; }
+    .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 18px; font-weight: 400; }
+    .tables-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px; }
+    .price-card { 
+        background: white; 
+        border-radius: 16px; 
+        padding: 30px; 
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
+        position: relative; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .price-card:hover { 
+        transform: translateY(-5px); 
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
+    }
+    .logo-icon { 
+        position: absolute; 
+        top: 25px; 
+        left: 25px; 
+        width: 42px; 
+        height: 42px; 
+        background: #ff0000; 
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    }
+    .logo-icon svg { width: 24px; height: 24px; }
+    .card-title { font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 25px; margin-left: 60px; text-transform: uppercase; }
+    .price-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+    .price-row:last-child { border-bottom: none; }
+    .plan-duration { font-size: 16px; color: #333; font-weight: 500; }
+    .plan-price { font-size: 22px; font-weight: 700; color: #1a1a1a; }
+    .no-renewal { font-size: 12px; color: #999; margin-top: 5px; font-weight: normal; }
+    .monthly-sub { font-size: 12px; color: #999; margin-top: 5px; font-weight: normal; font-style: italic; }
+    .highlighted-row { background: #f8f9ff; margin: 0 -30px; padding: 16px 30px; border-top: 1px solid #e8ecff; border-bottom: 1px solid #e8ecff; }
+    .footer { text-align: center; font-size: 14px; color: #666; margin-top: 30px; padding-top: 30px; border-top: 1px solid #e0e0e0; }
+    .footer .whatsapp { color: #25D366; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+    
+    @media (max-width: 768px) {
+        .tables-wrapper { grid-template-columns: 1fr; gap: 20px; }
+        .price-card { padding: 20px; }
+        .logo-icon { width: 36px; height: 36px; top: 20px; left: 20px; }
+        .logo-icon svg { width: 20px; height: 20px; }
+        .card-title { font-size: 20px; margin-left: 50px; margin-bottom: 20px; }
+        .plan-duration { font-size: 14px; }
+        .plan-price { font-size: 18px; }
+        .price-row { padding: 14px 0; }
+        .highlighted-row { margin: 0 -20px; padding: 14px 20px; }
+        h1 { font-size: 22px; }
+        .subtitle { font-size: 16px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Asesoría y Gestión en uso de Aplicaciones de Entretenimiento</h1>
+    <p class="subtitle">Acceso Premium a Música y Podcasts</p>
+    
+    <div class="tables-wrapper" id="pricing-tables">
+        <!-- Las tablas se generarán automáticamente -->
+    </div>
+    
+    <div class="footer">
+        SERVICIO 100% GARANTIZADO | SOPORTE DURANTE LA VIGENCIA | 
+        <span class="whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.456.13-.604.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp 8136000518
+        </span>
+    </div>
+</div>
+
+<script>
+    // ⚡ EDITAR SOLO LOS PRECIOS AQUÍ - SE ACTUALIZAN EN TIEMPO REAL
+    const PRECIOS = {
+        individual: {
+            mensual: "61.49",
+            tresMeses: "172.19",
+            seisMeses: "336.19",
+            doceMeses: "573.99",
+            suscripcion: "57.39"
+        },
+        duo: {
+            mensual: "81.99",
+            tresMeses: "221.39",
+            seisMeses: "434.59",
+            doceMeses: "860.99",
+            suscripcion: "73.79"
+        }
+    };
+
+    const planes = {
+        individual: {
+            nombre: "Cuenta Individual",
+            precios: [
+                { duracion: "1 mes", precio: `$${PRECIOS.individual.mensual} MXN`, tipo: "sin-renovacion" },
+                { duracion: "3 meses", precio: `$${PRECIOS.individual.tresMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "6 meses", precio: `$${PRECIOS.individual.seisMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "12 meses", precio: `$${PRECIOS.individual.doceMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "Suscripción mensual", precio: `$${PRECIOS.individual.suscripcion} MXN`, tipo: "suscripcion" }
+            ]
+        },
+        duo: {
+            nombre: "Cuenta Duo",
+            precios: [
+                { duracion: "1 mes", precio: `$${PRECIOS.duo.mensual} MXN`, tipo: "sin-renovacion" },
+                { duracion: "3 meses", precio: `$${PRECIOS.duo.tresMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "6 meses", precio: `$${PRECIOS.duo.seisMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "12 meses", precio: `$${PRECIOS.duo.doceMeses} MXN`, tipo: "sin-renovacion" },
+                { duracion: "Suscripción mensual", precio: `$${PRECIOS.duo.suscripcion} MXN`, tipo: "suscripcion" }
+            ]
+        }
+    };
+
+    function crearTabla(tipo) {
+        const plan = planes[tipo];
+        const container = document.getElementById('pricing-tables');
+        
+        const card = document.createElement('div');
+        card.className = 'price-card';
+        
+        card.innerHTML = `
+            <div class="logo-icon">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="#ff0000"/>
+                    <circle cx="35" cy="40" r="8" fill="white"/>
+                    <circle cx="65" cy="40" r="8" fill="white"/>
+                    <path d="M 30 65 Q 50 80, 70 65" stroke="white" stroke-width="6" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+            <h2 class="card-title">${plan.nombre}</h2>
+            ${plan.precios.map((item, index) => `
+                <div class="price-row ${item.tipo === 'suscripcion' ? 'highlighted-row' : ''}">
+                    <div>
+                        <div class="plan-duration">${item.duracion}</div>
+                        ${item.tipo === 'sin-renovacion' 
+                            ? '<div class="no-renewal">SIN RENOVACIÓN</div>' 
+                            : '<div class="monthly-sub">(hasta que la finalices)</div>'
+                        }
+                    </div>
+                    <div class="plan-price">${item.precio}</div>
+                </div>
+            `).join('')}
+        `;
+        
+        container.appendChild(card);
+    }
+
+    // Generar ambas tablas al cargar
+    crearTabla('individual');
+    crearTabla('duo');
+</script>
+
+</body>
+</html>
