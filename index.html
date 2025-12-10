@@ -4,154 +4,450 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔥 METAETIQUETAS PARA VISTA PREVIA EN FACEBOOK -->
+<!-- METAETIQUETAS PARA VISTA PREVIA -->
 <meta property="og:title" content="Planes Premium - Asesoría en Apps de Entretenimiento">
 <meta property="og:description" content="Acceso Premium a Música y Podcasts | Cuentas Individual y Duo | Soporte 100% Garantizado">
 <meta property="og:image" content="https://i.postimg.cc/zGwCGdhD/Premium_Plan.png">
-<meta property="og:url" content="https://tu-usuario.github.io/planes-premium/">
+<meta property="og:url" content="https://exploreras.github.io/Premium-Musica/">
 <meta property="og:type" content="website">
-
-<!-- METAETIQUETAS PARA TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Planes Premium - Asesoría en Apps">
-<meta name="twitter:description" content="Acceso Premium a Música y Podcasts">
-<meta name="twitter:image" content="https://i.postimg.cc/zGwCGdhD/Premium_Plan.png">
 
-<title>Acceso Premium a Música y Podcasts</title>
+<!-- Fuentes de Google -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<title>Premium Música & Podcasts - Acceso Garantizado</title>
+
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%); 
-        padding: 20px; 
-        line-height: 1.5; 
-        min-height: 100vh;
-    }
-    .container { max-width: 1200px; margin: 0 auto; }
-    h1 { text-align: center; color: #1a1a1a; margin-bottom: 10px; font-size: 28px; font-weight: 700; }
-    .subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 18px; font-weight: 400; }
-    .tables-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px; }
-    .price-card { 
-        background: white; 
-        border-radius: 16px; 
-        padding: 30px; 
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
-        position: relative; 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .price-card:hover { 
-        transform: translateY(-5px); 
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
-    }
-    .logo-icon { 
-        position: absolute; 
-        top: 25px; 
-        left: 25px; 
-        width: 42px; 
-        height: 42px; 
-        background: #ff0000; 
-        border-radius: 50%; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-    }
-    .logo-icon svg { width: 24px; height: 24px; }
-    .card-title { font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 25px; margin-left: 60px; text-transform: uppercase; }
-    .price-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
-    .price-row:last-child { border-bottom: none; }
-    .plan-duration { font-size: 16px; color: #333; font-weight: 500; }
-    .plan-price { font-size: 22px; font-weight: 700; color: #1a1a1a; }
-    .no-renewal { font-size: 12px; color: #999; margin-top: 5px; font-weight: normal; }
-    .monthly-sub { font-size: 12px; color: #999; margin-top: 5px; font-weight: normal; font-style: italic; }
-    .highlighted-row { background: #f8f9ff; margin: 0 -30px; padding: 16px 30px; border-top: 1px solid #e8ecff; border-bottom: 1px solid #e8ecff; }
-    
-    /* BOTÓN DE WHATSAPP */
-    .whatsapp-button {
-        display: block;
-        margin: 40px auto 30px;
-        padding: 16px 40px;
-        background: #25D366;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-        width: fit-content;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    :root {
+        --primary-red: #ff3131;
+        --primary-gray: #545454;
+        --accent-green: #00A650;
+        --accent-blue: #009EE3;
+        --bg-light: #f8f9fa;
     }
     
-    .whatsapp-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f8f9fa 0%, #eef2f6 100%);
+        color: var(--primary-gray);
     }
     
-    .whatsapp-button svg {
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-        margin-right: 10px;
+    .font-display {
+        font-family: 'Playfair Display', serif;
     }
     
-    .footer {
-        text-align: center;
-        font-size: 14px;
-        color: #666;
-        margin-top: 30px;
-        padding-top: 30px;
-        border-top: 1px solid #e0e0e0;
+    /* Animaciones */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-    .footer .whatsapp { color: #25D366; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
     
-    @media (max-width: 768px) {
-        .tables-wrapper { grid-template-columns: 1fr; gap: 20px; }
-        .price-card { padding: 20px; }
-        .logo-icon { width: 36px; height: 36px; top: 20px; left: 20px; }
-        .logo-icon svg { width: 20px; height: 20px; }
-        .card-title { font-size: 20px; margin-left: 50px; margin-bottom: 20px; }
-        .plan-duration { font-size: 14px; }
-        .plan-price { font-size: 18px; }
-        .price-row { padding: 14px 0; }
-        .highlighted-row { margin: 0 -20px; padding: 14px 20px; }
-        h1 { font-size: 22px; }
-        .subtitle { font-size: 16px; }
-        .whatsapp-button { font-size: 16px; padding: 14px 30px; }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .floating-element {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+    }
+    
+    /* Botones con efecto */
+    .btn-hover {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .btn-hover:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    
+    /* Tarjetas premium */
+    .card-premium {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(84, 69, 69, 0.12);
+        transition: all 0.4s ease;
+        border: 1px solid rgba(255, 49, 49, 0.08);
+    }
+    
+    .card-premium:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 50px rgba(84, 69, 69, 0.2);
+    }
+    
+    /* Logo animado */
+    .logo-icon {
+        background: linear-gradient(135deg, var(--primary-red) 0%, #ff5a5a 100%);
+        box-shadow: 0 4px 15px rgba(255, 49, 49, 0.3);
     }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Asesoría y Gestión en uso de Aplicaciones de Entretenimiento</h1>
-    <p class="subtitle">Acceso Premium a Música y Podcasts</p>
-    
-    <div class="tables-wrapper" id="pricing-tables">
-        <!-- Las tablas se generan automáticamente -->
+<!-- NAVEGACIÓN -->
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="font-display font-bold text-2xl text-gray-900">
+                PREMIUM<span class="text-red-500">MUSIC</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#precios" class="text-gray-700 hover:text-red-500 font-medium transition-colors">Planes</a>
+                <a href="#beneficios" class="text-gray-700 hover:text-red-500 font-medium transition-colors">Beneficios</a>
+                <a href="#proceso" class="text-gray-700 hover:text-red-500 font-medium transition-colors">Proceso</a>
+                <a href="#pagos" class="text-gray-700 hover:text-red-500 font-medium transition-colors">Pagos</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <div class="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-gray-50"></div>
+    <div class="absolute inset-0 opacity-30">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-red-100 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-gray-100 rounded-full filter blur-3xl"></div>
     </div>
     
-    <!-- BOTÓN DE WHATSAPP -->
-    <a href="https://wa.me/5218136000518" target="_blank" class="whatsapp-button">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.456.13-.604.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-       Contactar por WhatsApp
-    </a>
-    
-    <div class="footer">
-        SERVICIO 100% GARANTIZADO | SOPORTE DURANTE LA VIGENCIA | 
-        <span class="whatsapp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.456.13-.604.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-            WhatsApp 8136000518
-        </span>
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto fade-in">
+        <div class="floating-element mb-8">
+            <div class="w-24 h-24 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                <svg class="w-14 h-14 text-white" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" fill="white"/>
+                    <circle cx="35" cy="40" r="8" fill="#ff3131"/>
+                    <circle cx="65" cy="40" r="8" fill="#ff3131"/>
+                    <path d="M 30 65 Q 50 80, 70 65" stroke="#ff3131" stroke-width="6" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+        </div>
+        
+        <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">
+            <span class="text-gray-900">Asesoría y Gestión</span><br>
+            <span class="text-red-500">Premium</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Acceso Premium a Música y Podcasts con <strong>soporte 100% garantizado</strong> y activación inmediata
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="#precios" class="btn-hover bg-red-500 hover:bg-red-600 text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl">
+                Ver Planes y Precios
+            </a>
+            <a href="#pagos" class="btn-hover bg-white hover:bg-gray-50 text-red-500 border-2 border-red-500 px-10 py-5 rounded-full font-bold text-lg shadow-xl">
+                Métodos de Pago
+            </a>
+        </div>
+        
+        <div class="mt-12 flex justify-center items-center space-x-8 text-sm text-gray-500">
+            <div class="flex items-center">
+                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                Soporte 24/7
+            </div>
+            <div class="flex items-center">
+                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                Activación en 30-60 min
+            </div>
+            <div class="flex items-center">
+                <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                100% Garantizado
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
+<!-- TABLAS DE PRECIOS -->
+<section id="precios" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 fade-in">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                Elige tu <span class="text-red-500">Plan Perfecto</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Planes diseñados para tu estilo de vida. Sin compromisos, sin sorpresas.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12" id="pricing-tables">
+            <!-- Las tablas se generarán con JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 fade-in">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                Beneficios de los <span class="text-red-500">Servicios Premium</span>
+            </h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">🔇</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Sin Anuncios</h3>
+                <p class="text-gray-600">Escucha sin interrupciones, solo tu música</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">📱</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Modo Offline</h3>
+                <p class="text-gray-600">Disfruta tu música en cualquier lugar</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">🎵</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Calidad Superior</h3>
+                <p class="text-gray-600">Aprecia cada detalle con audio HD</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">🔄</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Sin Restricciones</h3>
+                <p class="text-gray-600">Reproducción en el orden que tú elijas</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">👥</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Comparte Música</h3>
+                <p class="text-gray-600">En vivo con las personas que más te importan</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center hover:border-red-200">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl">⚙️</span>
+                </div>
+                <h3 class="font-bold text-xl mb-4 text-gray-900">Herramientas Avanzadas</h3>
+                <p class="text-gray-600">Organiza playlists como tú quieras</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESCRIPCIÓN PLANES -->
+<section id="planes" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 fade-in">
+        <div class="grid lg:grid-cols-2 gap-12">
+            <div class="card-premium p-10">
+                <h3 class="font-display text-3xl font-bold mb-6 text-red-500">Plan Individual</h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Perfecto para quienes desean una experiencia musical única y totalmente personalizada. Con el Plan Individual disfrutas de todas las funciones Premium sin compartir tu suscripción, con la libertad de escuchar lo que quieras, cuando quieras, con calidad superior y sin interrupciones. Ideal si buscas una suscripción hecha a tu medida.
+                </p>
+            </div>
+            
+            <div class="card-premium p-10">
+                <h3 class="font-display text-3xl font-bold mb-6 text-red-500">Premium Duo</h3>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Pensado para dos personas que quieren disfrutar juntas, pero sin mezclar sus contenidos. Ofrece un ahorro significativo frente a contratar dos planes individuales.
+                </p>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start"><span class="text-red-500 mr-3">•</span> Reproducción simultánea</li>
+                    <li class="flex items-start"><span class="text-red-500 mr-3">•</span> Bibliotecas personales</li>
+                    <li class="flex items-start"><span class="text-red-500 mr-3">•</span> Perfiles individuales</li>
+                    <li class="flex items-start"><span class="text-red-500 mr-3">•</span> Privacidad total de la actividad musical</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESO DE COMPRA -->
+<section id="proceso" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 fade-in">
+        <div class="text-center mb-12">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                Proceso de <span class="text-red-500">Compra</span>
+            </h2>
+            <p class="text-xl text-gray-600">Tiempo estimado de activación: <strong>30 a 60 minutos</strong> en horario hábil</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card-premium p-8 text-center">
+                <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
+                <h3 class="font-bold text-xl mb-4">Elige tu Plan</h3>
+                <p class="text-gray-600">Selecciona el plan Individual o Duo que mejor se adapte a tus necesidades</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center">
+                <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
+                <h3 class="font-bold text-xl mb-4">Realiza tu Pago</h3>
+                <p class="text-gray-600">Paga con Mercado Pago (tarjeta) o Transferencia Bancaria</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center">
+                <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
+                <h3 class="font-bold text-xl mb-4">Envía Comprobante</h3>
+                <p class="text-gray-600">Envía el comprobante por WhatsApp al 8136000518</p>
+            </div>
+            
+            <div class="card-premium p-8 text-center">
+                <div class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">4</div>
+                <h3 class="font-bold text-xl mb-4">Activación</h3>
+                <p class="text-gray-600">Te enviamos el código temporal y activamos tu Premium en 30-60 min</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANSFERENCIA BANCARIA (MÁS COMPACTA) -->
+<section id="pagos" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 fade-in">
+        <div class="card-premium p-8 text-center" style="background: linear-gradient(135deg, #ff3131 0%, #ff5a5a 100%); color: white; min-height: auto;">
+            <h2 class="font-display text-3xl font-bold mb-6">
+                  También Aceptamos Transferencia
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-6">
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-lg">
+                    <p class="mb-2 text-sm"><strong>Banco:</strong> Albo</p>
+                    <p class="mb-2 text-sm"><strong>Nombre:</strong> Globix Servicios</p>
+                    <p class="mb-2 text-sm break-all"><strong>Clabe:</strong> 721180100038243255</p>
+                </div>
+                <div class="bg-white/20 backdrop-blur-md p-4 rounded-lg flex flex-col justify-center">
+                    <p class="text-sm mb-3"> Envía tu comprobante a:</p>
+                    <a href="https://wa.me/5218136000518" class="btn-hover inline-flex items-center justify-center bg-white text-red-500 px-5 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+                        <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.456.13-.604.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        8136000518
+                    </a>
+                </div>
+            </div>
+            
+            <p class="text-base">Tiempo de procesamiento: 15 minutos</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONDICIONES -->
+<section id="condiciones" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 fade-in">
+        <div class="text-center mb-12">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                Condiciones para la <span class="text-red-500">Activación</span>
+            </h2>
+        </div>
+        
+        <div class="card-premium p-10">
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="font-bold text-2xl mb-6 text-gray-900">Requisitos Previos</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-start p-4 bg-red-50 rounded-lg">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-white text-xs font-bold">!</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Sin Pruebas Gratuitas</h4>
+                                <p class="text-gray-600 text-sm">Tu cuenta no debe tener pruebas mensuales gratuitas pendientes para evitar solapamiento.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 bg-red-50 rounded-lg">
+                            <div class="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-white text-xs font-bold">!</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Sin Plan Premium Activo</h4>
+                                <p class="text-gray-600 text-sm">Tu cuenta debe estar en modo gratuito al momento de la activación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-2xl mb-6 text-gray-900">Procesos de Activación</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <span class="text-green-500 font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Activación desde tu Cuenta</h4>
+                                <p class="text-gray-600 text-sm">Realizamos la activación directamente en tu cuenta para conservar tu biblioteca y playlists.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <span class="text-green-500 font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">Acceso Seguro y Temporal</h4>
+                                <p class="text-gray-600 text-sm">Solo necesitamos tu usuario. La plataforma envía un código temporal para nuestro acceso único.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center fade-in">
+        <div class="font-display text-3xl font-bold mb-4">
+            PREMIUM<span class="text-red-500">MUSIC</span>
+        </div>
+        <p class="text-gray-400 text-lg mb-6">
+            SERVICIO 100% GARANTIZADO | SOPORTE DURANTE LA VIGENCIA
+        </p>
+        <div class="border-t border-gray-800 pt-6">
+            <p class="text-gray-500">
+                © 2025 Premium Music. Asesoría y Gestión en Apps de Entretenimiento.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- BOTÓN WHATSAPP FIJO (MÁS GRANDE Y VISÍBLE) -->
+<a href="https://wa.me/5218136000518" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl btn-hover z-50">
+    <svg class="w-9 h-9" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.456.13-.604.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
 
 <script>
-    // ⚡ EDITAR SOLO LOS PRECIOS AQUÍ
+    // ENLACES DE MERCADO PAGO
+    const MERCADOPAGO_LINKS = {
+        individual: {
+            mensual: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=2d3563dd7b4442b59fda26292b6b5716",
+            tresMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=9fbae780505c40cab107b97f8233867a",
+            seisMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=2b5ab95027da4b0db1150156911cd907",
+            doceMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=9d9bd8f394444e6b8d88c3d2e16b0cef",
+            suscripcion: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=747bb9307a004b4991a47d4e754e7810"
+        },
+        duo: {
+            mensual: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=8a080b16b7e74df4b058eb14ff167ca6",
+            tresMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=c4c6ea0a03764ba6a4d3fe6a61c27d17",
+            seisMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=c82058e163d64e59b6c53527e1270a71",
+            doceMeses: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=6fae0e4bfc4747c184f2d5acbea66ebd",
+            suscripcion: "https://www.mercadopago.com.mx/subscriptions/checkout?preapproval_plan_id=ff41761c604249649240d7fab9f47023"
+        }
+    };
+
+    // PRECIOS
     const PRECIOS = {
         individual: {
             mensual: "61.49",
@@ -169,68 +465,103 @@
         }
     };
 
-    const planes = {
-        individual: {
-            nombre: "Cuenta Individual",
-            precios: [
-                { duracion: "1 mes", precio: `$${PRECIOS.individual.mensual} MXN`, tipo: "sin-renovacion" },
-                { duracion: "3 meses", precio: `$${PRECIOS.individual.tresMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "6 meses", precio: `$${PRECIOS.individual.seisMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "12 meses", precio: `$${PRECIOS.individual.doceMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "Suscripción mensual", precio: `$${PRECIOS.individual.suscripcion} MXN`, tipo: "suscripcion" }
-            ]
-        },
-        duo: {
-            nombre: "Cuenta Duo",
-            precios: [
-                { duracion: "1 mes", precio: `$${PRECIOS.duo.mensual} MXN`, tipo: "sin-renovacion" },
-                { duracion: "3 meses", precio: `$${PRECIOS.duo.tresMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "6 meses", precio: `$${PRECIOS.duo.seisMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "12 meses", precio: `$${PRECIOS.duo.doceMeses} MXN`, tipo: "sin-renovacion" },
-                { duracion: "Suscripción mensual", precio: `$${PRECIOS.duo.suscripcion} MXN`, tipo: "suscripcion" }
-            ]
-        }
-    };
-
     function crearTabla(tipo) {
-        const plan = planes[tipo];
+        const plan = {
+            nombre: tipo === 'individual' ? 'Cuenta Individual' : 'Cuenta Duo',
+            precios: [
+                { duracion: "1 mes", precio: `$${PRECIOS[tipo].mensual} MXN`, tipo: "sin-renovacion", boton: MERCADOPAGO_LINKS[tipo].mensual },
+                { duracion: "3 meses", precio: `$${PRECIOS[tipo].tresMeses} MXN`, tipo: "sin-renovacion", boton: MERCADOPAGO_LINKS[tipo].tresMeses },
+                { duracion: "6 meses", precio: `$${PRECIOS[tipo].seisMeses} MXN`, tipo: "sin-renovacion", boton: MERCADOPAGO_LINKS[tipo].seisMeses },
+                { duracion: "12 meses", precio: `$${PRECIOS[tipo].doceMeses} MXN`, tipo: "sin-renovacion", boton: MERCADOPAGO_LINKS[tipo].doceMeses },
+                { duracion: "Suscripción mensual", precio: `$${PRECIOS[tipo].suscripcion} MXN`, tipo: "suscripcion", boton: MERCADOPAGO_LINKS[tipo].suscripcion }
+            ]
+        };
+
         const container = document.getElementById('pricing-tables');
         
         const card = document.createElement('div');
-        card.className = 'price-card';
+        card.className = 'card-premium p-8';
         
         card.innerHTML = `
-            <div class="logo-icon">
-                <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="48" fill="#ff0000"/>
-                    <circle cx="35" cy="40" r="8" fill="white"/>
-                    <circle cx="65" cy="40" r="8" fill="white"/>
-                    <path d="M 30 65 Q 50 80, 70 65" stroke="white" stroke-width="6" stroke-linecap="round" fill="none"/>
-                </svg>
+            <div class="flex items-center mb-8">
+                <div class="logo-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <svg class="w-7 h-7 text-white" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="48" fill="white"/>
+                        <circle cx="35" cy="40" r="8" fill="#ff3131"/>
+                        <circle cx="65" cy="40" r="8" fill="#ff3131"/>
+                        <path d="M 30 65 Q 50 80, 70 65" stroke="#ff3131" stroke-width="6" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <h2 class="font-display text-3xl font-bold text-gray-900">${plan.nombre}</h2>
             </div>
-            <h2 class="card-title">${plan.nombre}</h2>
+            
             ${plan.precios.map((item, index) => `
-                <div class="price-row ${item.tipo === 'suscripcion' ? 'highlighted-row' : ''}">
-                    <div>
-                        <div class="plan-duration">${item.duracion}</div>
+                <div class="flex justify-between items-center py-4 border-b border-gray-100 hover:bg-red-50/30 px-4 -mx-4 rounded-lg transition-colors ${item.tipo === 'suscripcion' ? 'bg-red-50/50 border-red-200' : ''}">
+                    <div class="flex-1">
+                        <div class="font-semibold text-lg text-gray-900">${item.duracion}</div>
                         ${item.tipo === 'sin-renovacion' 
-                            ? '<div class="no-renewal">SIN RENOVACIÓN</div>' 
-                            : '<div class="monthly-sub">(hasta que la finalices)</div>'
+                            ? '<div class="text-sm text-gray-500 font-medium">SIN RENOVACIÓN</div>' 
+                            : '<div class="text-sm text-gray-500 font-medium italic">(hasta que la finalices)</div>'
                         }
                     </div>
-                    <div class="plan-price">${item.precio}</div>
+                    <div class="flex items-center space-x-4">
+                        <div class="font-bold text-2xl text-red-500">${item.precio}</div>
+                        <a href="${item.boton}" target="_blank" class="btn-hover bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg whitespace-nowrap flex items-center">
+                            <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/>
+                            </svg>
+                            Pagar
+                        </a>
+                    </div>
                 </div>
             `).join('')}
+            
+            <div class="mt-8 text-center">
+                <p class="text-sm text-gray-500">Al comprar, aceptas nuestras <a href="#condiciones" class="text-red-500 underline">condiciones de activación</a></p>
+            </div>
         `;
         
         container.appendChild(card);
     }
 
-    // Generar ambas tablas al cargar
-    crearTabla('individual');
-    crearTabla('duo');
+    // Inicializar al cargar
+    document.addEventListener('DOMContentLoaded', function() {
+        crearTabla('individual');
+        crearTabla('duo');
+        
+        // Animación al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
 </script>
 
 </body>
 </html>
-
